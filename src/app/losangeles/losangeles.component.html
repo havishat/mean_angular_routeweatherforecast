@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title *ngIf=(bool)>{{weather.name}}</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Router Outlet</legend>
+        <h1 *ngIf=(bool) style="text-align:center">{{weather.name}}, CA</h1>
+        <div>
+            <h4 *ngIf=(bool) >Humidity: {{weather.main.humidity}}</h4>
+            <h4 *ngIf=(bool) >Temperature(Average): {{weather.main.temp}}</h4>
+            <h4 *ngIf=(bool) >Temperature(High): {{weather.main.temp_max}}</h4>
+            <h4 *ngIf=(bool) >Temperature(Low): {{weather.main.temp_min}}</h4>
+            <h4 *ngIf=(bool) >Status: {{weather.weather[0].description}}</h4>
+            </div>
+            <div>
+            <img src="../assets/losangeles.jpeg" alt="no img">
+        </div>
+    </fieldset>
+</body>
+</html>
